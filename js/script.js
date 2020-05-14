@@ -452,7 +452,7 @@ jQuery(function ($) {
 
     });
 
-
+    /*
     //Contact Us
     $("#submit_btn").click(function () {
 
@@ -529,7 +529,7 @@ jQuery(function ($) {
 
     });
 
-
+    */
     /*============================================*
             Cube Portfolio
   * ============================================*/
