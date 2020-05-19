@@ -503,8 +503,8 @@ jQuery(function ($) {
             $.post('https://form-api.codersco.cl/codersco_cl/', post_data, function (response) {
 
                 //load json data from server and output message
+                console.log('//response', response)
                 if (response.type == 'error') {
-                    console.log('//response', response)
                     output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
                 } else {
                     output = '<div class="alert-success" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
