@@ -464,7 +464,7 @@ jQuery(function ($) {
         var user_name = $('input[name=name]').val();
         var user_email = $('input[name=email]').val();
         var user_phone = $('input[name=phone]').val();
-        var user_plan = $('input[name=plan]').val();
+        var user_plan = $('select[name=plan]').val();
         var user_message = $('textarea[name=message]').val();
 
         //simple validation at client's end
