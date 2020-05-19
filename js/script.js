@@ -454,6 +454,12 @@ jQuery(function ($) {
 
 
     //Contact Us
+
+    function onSubmit(event) {
+        event.preventDefault()
+        return false;
+    }
+
     $("#submit_btn").click(function () {
 
         //disable submit button on click
