@@ -452,18 +452,19 @@ jQuery(function ($) {
 
     });
 
-    /*
+
     //Contact Us
     $("#submit_btn").click(function () {
 
         //disable submit button on click
         $("#submit_btn").attr("disabled", "disabled");
-        $("#submit_btn span").text('Sending');
+        $("#submit_btn span").text('Enviando');
         $("#submit_btn i").removeClass('d-none');
 
-        var user_name = $('input[name=first_name]').val() + ' ' + $('input[name=last_name]').val();
+        var user_name = $('input[name=name]').val();
         var user_email = $('input[name=email]').val();
         var user_phone = $('input[name=phone]').val();
+        var user_plan = $('input[name=plan]').val();
         var user_message = $('textarea[name=message]').val();
 
         //simple validation at client's end
@@ -479,6 +480,10 @@ jQuery(function ($) {
         //proceed = false;
         // }
 
+        if (user_plan == "") {
+            proceed = false;
+        }
+
         if (user_message == "") {
             proceed = false;
         }
@@ -490,11 +495,12 @@ jQuery(function ($) {
                 'userName': user_name,
                 'userEmail': user_email,
                 'userPhone': user_phone,
+                'userPlan': user_plan,
                 'userMessage': user_message
             };
 
             //Ajax post data to server
-            $.post('https://contact.codersco.cl/', post_data, function (response) {
+            $.post('https://form-api.codersco.cl/codersco_cl/', post_data, function (response) {
 
                 //load json data from server and output message
                 if (response.type == 'error') {
@@ -529,7 +535,7 @@ jQuery(function ($) {
 
     });
 
-    */
+
     /*============================================*
             Cube Portfolio
   * ============================================*/
