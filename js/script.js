@@ -509,7 +509,6 @@ jQuery(function ($) {
             $.post('https://form-api.codersco.cl/codersco_cl/', post_data, function (response) {
 
                 //load json data from server and output message
-                console.log('//response', response)
                 if (response.type == 'error') {
                     output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
                 } else {
@@ -790,3 +789,43 @@ jQuery(function ($) {
 
 
 });
+
+/* ===================================
+           Form
+    ====================================== */
+
+function selectPlan(event) {
+    var select = document.getElementById("select-plan")
+    select.value = event.dataset.name
+}
+
+/* ===================================
+           Modal
+    ====================================== */
+
+$('#success').modal({
+    show: false
+})
+
+$('#fail').modal({
+    show: false
+})
+
+/* ===================================
+           Type Writer
+    ====================================== */
+
+var customText = document.getElementById("custom-text")
+var typewriter = new TypeWriter(customText, true)
+
+typewriter.run(async function () {
+    await typewriter.sleep(6000)
+    await typewriter.deleteAll()
+    await typewriter.writting("que enamore")
+    await typewriter.sleep(4000)
+    await typewriter.deleteAll()
+    await typewriter.writting("que sea auténtica")
+    await typewriter.sleep(4000)
+    await typewriter.deleteAll()
+    await typewriter.writting("que te direfencie")
+})

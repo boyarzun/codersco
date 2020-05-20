@@ -365,8 +365,8 @@
                             <li><i class="fa fa-times" aria-hidden="true"></i>WebPay</li>
                         </ul>
 
-                        <a href="#contacto" onclick="selectPlan(this)" data-name="starter-plan"
-                            class="btn btn-large btn-rounded btn-blue w-100 scroll">Contratar</a href="#contacto">
+                        <a href="#contact-form" onclick="selectPlan(this)" data-name="starter-plan"
+                            class="btn btn-large btn-rounded btn-blue w-100 scroll">Contratar</a>
 
                     </div>
                 </div>
@@ -390,7 +390,7 @@
                             <li><i class="fa fa-check" aria-hidden="true"></i>WebPay</li>
                         </ul>
 
-                        <a href="#contacto" onclick="selectPlan(this)" data-name="ecommerce-plan"
+                        <a href="#contact-form" onclick="selectPlan(this)" data-name="ecommerce-plan"
                             class="btn btn-large btn-rounded btn-gradient w-100 scroll">Contratar</a>
 
                     </div>
@@ -429,7 +429,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 p-0">
+                <div class="col-md-6 p-0" id="contact-form">
                     <div class="container">
                         <!--Heading-->
                         <div class="row">
@@ -444,9 +444,6 @@
                         <!--Contacto us-->
                         <form class="contact-form" onsubmit="onSubmit(this)">
                             <div class="row">
-
-                                <div class="col-sm-12" id="result"></div>
-
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
                                         <input class="form-control" type="text" placeholder="Nombre:" required=""
@@ -481,6 +478,9 @@
                                             name="message"></textarea>
                                     </div>
                                 </div>
+
+                                <div class="col-sm-12" id="result"></div>
+
                                 <div class="col-sm-12">
                                     <button type="submit" class="btn btn-large btn-gradient btn-rounded mt-4"
                                         id="submit_btn"><i class="fa fa-spinner fa-spin mr-2 d-none"
@@ -580,43 +580,15 @@
     <!-- custom script -->
     <script src="js/script.js"></script>
     <script src="js/typewriter.js"></script>
+
+    <!--
     <script src="https://www.google.com/recaptcha/api.js?render=6LfDS_cUAAAAAKTdl_5-iXIWK4KMJF4sNSql4m7b"></script>
     <script>
         grecaptcha.ready(function () {
             grecaptcha.execute('6LfDS_cUAAAAAKTdl_5-iXIWK4KMJF4sNSql4m7b', { action: 'homepage' });
         });
     </script>
-
-    <script>
-        function selectPlan(event) {
-            var select = document.getElementById("select-plan")
-            select.value = event.dataset.name
-        }
-
-        $('#success').modal({
-            show: false
-        })
-
-        $('#fail').modal({
-            show: false
-        })
-
-        var customText = document.getElementById("custom-text")
-        var typewriter = new TypeWriter(customText, true)
-
-        typewriter.run(async function () {
-            await typewriter.sleep(6000)
-            await typewriter.deleteAll()
-            await typewriter.writting("que enamore")
-            await typewriter.sleep(4000)
-            await typewriter.deleteAll()
-            await typewriter.writting("que sea auténtica")
-            await typewriter.sleep(4000)
-            await typewriter.deleteAll()
-            await typewriter.writting("que te direfencie")
-        })
-
-    </script>
+    -->
 
 </body>
 
