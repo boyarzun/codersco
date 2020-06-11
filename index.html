@@ -181,7 +181,7 @@
     <!--About End-->
 
     <!--Features Start-->
-    <section id="feature">
+    <section id="feature" style="padding-bottom: 90px;">
         <div class="container">
             <!--Heading-->
             <div class="row wow fadeIn">
@@ -331,7 +331,7 @@
     <!--Portfolio end-->
 
     <!--Precios Start-->
-    <section id="precios">
+    <section id="precios" style="padding-bottom: 40px;">
         <div class="container">
             <!--Heading-->
             <div class="row">
@@ -357,7 +357,12 @@
                             <span class="month"> SOLO UN PAGO</span>
                         </div>
                         <ul class="packages">
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Hosting + Dominio</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i>Hosting + Dominio
+                                <button type="button" class="btn btn-link tootip" data-toggle="tooltip"
+                                    data-placement="top" title="Hosting Básico + Dominio.cl">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                </button>
+                            </li>
                             <li><i class="fa fa-check" aria-hidden="true"></i>Diseño adaptable</li>
                             <li><i class="fa fa-check" aria-hidden="true"></i>Formulario de contacto</li>
                             <li><i class="fa fa-times" aria-hidden="true"></i>Correo coorporativo</li>
@@ -382,12 +387,32 @@
                             <span class="month"> SOLO UN PAGO</span>
                         </div>
                         <ul class="packages">
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Hosting + Dominio</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i>Hosting + Dominio
+                                <button type="button" class="btn btn-link tootip" data-toggle="tooltip"
+                                    data-placement="top" title="Hosting Básico + Dominio.cl">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                </button>
+                            </li>
                             <li><i class="fa fa-check" aria-hidden="true"></i>Diseño adaptable</li>
                             <li><i class="fa fa-check" aria-hidden="true"></i>Formulario de contacto</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>Correo coorporativo</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>E-Commerce</li>
-                            <li><i class="fa fa-check" aria-hidden="true"></i>WebPay</li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i>Correo coorporativo
+                                <button type="button" class="btn btn-link tootip" data-toggle="tooltip"
+                                    data-placement="top" title="5 Cuentas">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i>E-Commerce
+                                <button type="button" class="btn btn-link tootip" data-toggle="tooltip"
+                                    data-placement="top" title="WooCommerce">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                </button>
+                            </li>
+                            <li><i class="fa fa-check" aria-hidden="true"></i>WebPay
+                                <button type="button" class="btn btn-link tootip" data-toggle="tooltip"
+                                    data-placement="top" title="Khipu">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                                </button>
+                            </li>
                         </ul>
 
                         <a href="#contact-form" onclick="selectPlan(this)" data-name="ecommerce-plan"
@@ -415,7 +440,7 @@
                             <!--Phone-->
                             <p class="mb-3 text-white">Número de contacto : +56 9 1234 5678</p>
                             <!--Email-->
-                            <p class="mb-3 text-white">mail : hola@codersco.cl</p>
+                            <p class="mb-3 text-white">E-Mail : hola@codersco.cl</p>
                             <!--Timing-->
                             <p class="mb-3 text-white">Lunes a Viernes 10:00 am – 18:00 pm</p>
                             <!--Social Icon-->
@@ -436,7 +461,7 @@
                             <div class="col-md-12 text-center">
                                 <div class="title d-inline-block">
                                     <h6 class="mb-3 third-color">Más información</h6>
-                                    <h2>Mantengámonos en contacto</h2>
+                                    <h2>Contacto</h2>
                                 </div>
                             </div>
                         </div>
@@ -546,6 +571,11 @@
     <!-- Optional JavaScript -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.appear.js"></script>
     <!-- isotop gallery -->
@@ -580,6 +610,7 @@
     <!-- custom script -->
     <script src="js/script.js"></script>
     <script src="js/typewriter.js"></script>
+
 
     <!--
     <script src="https://www.google.com/recaptcha/api.js?render=6LfDS_cUAAAAAKTdl_5-iXIWK4KMJF4sNSql4m7b"></script>

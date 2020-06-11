@@ -4270,3 +4270,17 @@ ul.count_down.white li p:nth-child(2) {
     }
 
 }
+
+.btn.btn-link.tootip {
+    border: none;
+    color: black;
+    padding: 0px;
+}
+
+.btn.btn-link.tootip:not(:disabled):not(.disabled) {
+    cursor: default;
+}
+
+.price-two:hover .btn {
+    background-color: transparent;
+}
