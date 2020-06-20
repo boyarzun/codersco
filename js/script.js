@@ -507,27 +507,31 @@ jQuery(function ($) {
             };
 
             //Ajax post data to server
-            $.post('https://forms.codersco.cl/api/v1/8c7b41d5-a2ba-45fd-b2dd-b7001e5050eb/', post_data, function (response) {
-
-                //load json data from server and output message
-                if (response.type == 'error') {
-                    output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
-                } else {
-                    output = '<div class="alert-success" style="padding:10px; margin-bottom:30px;">' + response.text + '</div>';
+            $.post('https://forms.codersco.cl/api/v1/3063f0d9-e7db-40ee-a46d-efa97eeb63fc/', post_data, 'json')
+                .done(function (response, textStatus) {
+                    output = '<div class="alert-success" style="padding:10px; margin-bottom:30px;">Mensaje enviado!</div>';
 
                     //reset values in all input fields
                     $('.contact-form input').val('');
                     $('.contact-form textarea').val('');
-                }
 
-                $("#result").hide().html(output).slideDown();
+                    $("#result").hide().html(output).slideDown();
 
-                // enable submit button on action done
-                $("#submit_btn").removeAttr("disabled");
-                $("#submit_btn span").text('Comenzar!');
-                $("#submit_btn i").addClass('d-none');
+                    // enable submit button on action done
+                    $("#submit_btn").removeAttr("disabled");
+                    $("#submit_btn span").text('Comenzar!');
+                    $("#submit_btn i").addClass('d-none');
+                })
+                .fail(function (xhr, textStatus, errorThrown) {
+                    output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">Algo salio mal. ' + errorThrown + '</div>';
 
-            }, 'json');
+                    $("#result").hide().html(output).slideDown();
+
+                    // enable submit button on action done
+                    $("#submit_btn").removeAttr("disabled");
+                    $("#submit_btn span").text('Comenzar!');
+                    $("#submit_btn i").addClass('d-none');
+                })
 
         }
         else {
