@@ -499,10 +499,11 @@ jQuery(function ($) {
             //data to be sent to server
             post_data = {
                 'userName': user_name,
-                'userEmail': user_email,
+                '_replyTo': user_email,
                 'userPhone': user_phone,
                 'userPlan': user_plan,
-                'userMessage': user_message
+                'userMessage': user_message,
+                'g-recaptcha-response': grecaptcha.getResponse()
             };
 
             //Ajax post data to server
