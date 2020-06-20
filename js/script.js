@@ -507,7 +507,7 @@ jQuery(function ($) {
             };
 
             //Ajax post data to server
-            $.post('https://forms.codersco.cl/api/v1/3063f0d9-e7db-40ee-a46d-efa97eeb63fc/', post_data, 'json')
+            $.post('https://forms.codersco.cl/api/v1/d3f1d691-6348-4dff-8473-56676c7e24dc/', post_data, 'json')
                 .done(function (response, textStatus) {
                     output = '<div class="alert-success" style="padding:10px; margin-bottom:30px;">Mensaje enviado!</div>';
 
