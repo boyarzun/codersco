@@ -506,7 +506,7 @@ jQuery(function ($) {
             };
 
             //Ajax post data to server
-            $.post('http://forms.codersco.cl/api/v1/8c7b41d5-a2ba-45fd-b2dd-b7001e5050eb/', post_data, function (response) {
+            $.post('https://forms.codersco.cl/api/v1/8c7b41d5-a2ba-45fd-b2dd-b7001e5050eb/', post_data, function (response) {
 
                 //load json data from server and output message
                 if (response.type == 'error') {
