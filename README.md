@@ -1,4 +1,4 @@
-# codersco
+# The Coders Company
 
 A landing page which was modified for a customer who wanted to offer their services on internet.
 
